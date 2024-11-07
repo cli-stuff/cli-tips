@@ -1,0 +1,113 @@
+Use 'alias' to create your own commands. Example: alias ll='ls -la'
+Use 'htop' for real-time monitoring of system resources
+Use 'df -h' to check available disk space
+The 'grep -i' command allows case-insensitive search
+Use 'crontab -e' to schedule automatic tasks
+The 'du -sh *' command helps see the size of all directories in the current folder
+To quickly find a file, use 'find /path/to/search -name filename'
+Use 'lsblk' to list all block devices
+Use 'top' to monitor system processes
+Use 'ps aux' to see detailed information about running processes
+Use 'kill' followed by a PID to terminate a process
+Use 'chmod +x script.sh' to make a script executable
+Use 'man command' to view the manual for any command
+Use 'tldr <command>' for simplified man pages
+Use 'cp -r' to copy directories
+Use 'mv' to move or rename files
+Use 'rsync' for fast and reliable file synchronization
+Use 'wget' to download files from the internet
+Use 'curl -O' to download files from a URL
+Use 'tar -czvf archive.tar.gz directory' to compress a directory
+Use 'tar -xzvf archive.tar.gz' to extract a compressed file
+Use 'sudo' to execute commands with superuser privileges
+Use 'cat' to display file content
+Use 'less' to view file content page by page
+Use 'more' to view file content one screen at a time
+Use 'tail -f file' to monitor changes in a file in real-time
+Use 'head -n 10 file' to view the first 10 lines of a file
+Use 'grep' to search within files
+Use 'cut' to remove sections from each line of a file
+Use 'sort' to sort lines in a file
+Use 'uniq' to remove duplicate lines from a file
+Use 'diff' to compare files line by line
+Use 'find /path -name filename' to search for files by name
+Use 'locate filename' to quickly find files by name
+Use 'updatedb' to update the database used by locate
+Use 'alias' to create command shortcuts
+Use 'export' to set environment variables
+Use 'echo' to print text to the terminal
+Use 'which command' to find the path of a command
+Use 'history' to view the command history
+Use 'clear' to clear the terminal screen
+Use 'sudo apt update' to update the package list
+Use 'sudo apt upgrade' to upgrade installed packages
+Use 'sudo apt install <package>' to install software packages
+Use 'sudo apt remove <package>' to uninstall packages
+Use 'apt-cache search <package>' to search for a package
+Use 'dpkg -l' to list all installed packages
+Use 'dpkg -S filename' to find which package owns a file
+Use 'snap install <package>' to install snap packages
+Use 'snap list' to list installed snap packages
+Use 'snap remove <package>' to remove snap packages
+Use 'systemctl start <service>' to start a system service
+Use 'systemctl stop <service>' to stop a system service
+Use 'systemctl restart <service>' to restart a system service
+Use 'systemctl enable <service>' to enable a service at boot
+Use 'systemctl disable <service>' to disable a service at boot
+Use 'journalctl' to view system logs
+Use 'journalctl -xe' to view logs in real-time
+Use 'lsof' to list open files and processes
+Use 'ufw status' to check firewall status
+Use 'ufw allow <port>' to allow a specific port through the firewall
+Use 'ufw deny <port>' to block a specific port
+Use 'ip addr' to show network interfaces
+Use 'ifconfig' to view and configure network interfaces
+Use 'ping' to test network connectivity
+Use 'netstat' to display network connections and routing tables
+Use 'traceroute' to trace the route packets take to reach a destination
+Use 'nmcli' to manage network connections via CLI
+Use 'hostname' to display or set the system hostname
+Use 'whoami' to display the current user
+Use 'uptime' to check system uptime
+Use 'dmesg' to view kernel and system messages
+Use 'lscpu' to display CPU architecture information
+Use 'free -h' to view system memory usage
+Use 'watch' to run a command at regular intervals
+Use 'find /path -type f' to search only for files
+Use 'find /path -type d' to search only for directories
+Use 'chmod' to change file permissions
+Use 'chown' to change file ownership
+Use 'useradd' to create a new user
+Use 'usermod' to modify user accounts
+Use 'passwd' to change the password of a user
+Use 'groupadd' to create a new group
+Use 'groupdel' to delete a group
+Use 'groups' to list the groups a user belongs to
+Use 'su' to switch to another user
+Use 'sudo su' to become the root user
+Use 'id' to display user and group IDs
+Use 'who' to see who is logged in
+Use 'last' to view login history
+Use 'chroot' to change the root directory
+Use 'tar -czf' to create compressed archives
+Use 'tar -xzf' to extract compressed archives
+Use 'gzip' to compress files
+Use 'gunzip' to decompress files
+Use 'bzip2' to compress files with higher compression rates
+Use 'bunzip2' to decompress bzip2 files
+Use 'xz' to compress files with even higher compression
+Use 'unxz' to decompress xz files
+Use 'md5sum' to check the MD5 checksum of a file
+Use 'sha256sum' to check the SHA256 checksum of a file
+Use 'ncdu' for an interactive disk usage analyzer
+Use 'lvm' for managing logical volumes
+Use 'docker' to manage containers
+Use 'git' for version control
+Use 'git clone <repository>' to clone a repository
+Use 'git status' to check the status of your git repository
+Use 'git add' to add changes to the staging area
+Use 'git commit' to commit changes
+Use 'git push' to push changes to a remote repository
+Use 'git pull' to pull changes from a remote repository
+Use 'git merge' to merge branches
+Use 'git log' to view commit history
