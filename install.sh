@@ -19,8 +19,16 @@
 #   - Script will exit on first error (set -e)
 # ====================================================================================
 
+# shellcheck disable=SC2236
+
 # Exit on any error
 set -e
+
+if [[ ! -n "$PREFIX" ]]; then
+    prefix="/usr"
+else
+    prefix="$PREFIX"
+fi
 
 # Define installation directories and repository information
 # PREFIX is expected to be set in the environment
@@ -60,14 +68,14 @@ echo ""
 
 echo "Installing..."
 # Install the main executable to system bin directory
-sudo mv cli-tips.sh "$PREFIX/usr/bin/cli-tips"
+$sudo mv cli-tips.sh "$prefix/bin/cli-tips"
 # Set executable permissions
-chmod +x "$PREFIX/usr/bin/cli-tips"
+chmod +x "$prefix/bin/cli-tips"
 
-sudo mkdir -p "$PREFIX/usr/share/cli-tips/translations"
+$sudo mkdir -p "$prefix/share/cli-tips/translations"
 
 # Install translation files to system share directory
-sudo mv translations/* "$PREFIX/usr/share/cli-tips/"
+$sudo mv translations/* "$$prefix/share/cli-tips/"
 
 # Clean up temporary installation files
 rm -rf "$TEMP_DIR"
