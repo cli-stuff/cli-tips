@@ -2,9 +2,18 @@
 
 # shellcheck disable=SC2236
 
+# Exit on any error
+set -e
+
+if [[ ! -n "$PREFIX" ]]; then
+    prefix="/usr"
+else
+    prefix="$PREFIX"
+fi
+
 # Default tips folder
 if [ ! -n "$TIPS_FOLDER" ]; then
-    TIPS_FOLDER="$PREFIX/usr/share/cli-tips"
+    TIPS_FOLDER="$prefix/share/cli-tips"
 fi
 
 # Default language is based on the user's environment

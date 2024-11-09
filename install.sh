@@ -42,7 +42,9 @@ sudo="sudo"
 
 # shellcheck disable=SC2143,SC2034
 # sudo is not required on Android or MSYS
-[[ $(echo "$OSTYPE" | grep -qE '^(linux-android|msys).*') ]] && sudo=""
+if echo "$OSTYPE" | grep -qE '^(linux-android|msys).*'; then
+    sudo=""
+fi
 
 # Create temporary directory for installation files
 [[ ! -d "$TEMP_DIR" ]] && mkdir "$TEMP_DIR"
