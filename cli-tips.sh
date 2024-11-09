@@ -7,6 +7,9 @@ set -e
 
 if [[ ! -n "$PREFIX" ]]; then
     prefix="/usr"
+# macOS
+elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
+    prefix="/usr/local"
 else
     prefix="$PREFIX"
 fi
