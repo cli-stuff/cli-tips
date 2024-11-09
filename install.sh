@@ -36,7 +36,7 @@ TEMP="$PREFIX/tmp"
 TEMP_DIR="$TEMP/cli-tips-installer"
 
 # GitHub repository path
-REPO="okineadev/cli-tips"
+REPO="cli-stuff/cli-tips"
 
 sudo="sudo"
 
