@@ -24,13 +24,15 @@
 # Exit on any error
 set -e
 
+# Determine the installation prefix
 if [[ ! -n "$PREFIX" ]]; then
-    prefix="/usr"
-# macOS
-elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
-    # The `/usr` directory in macOS is read-only, so you need to change the prefix to `/usr/local`
-    # https://github.com/openstreetmap/mod_tile/issues/349#issuecomment-1784165860
-    prefix="/usr/local"
+    if echo "$OSTYPE" | grep -qE '^darwin.*'; then
+        # The `/usr` directory in macOS is read-only, so you need to change the prefix to `/usr/local`
+        # https://github.com/openstreetmap/mod_tile/issues/349#issuecomment-1784165860
+        prefix="/usr/local"
+    else
+        prefix="/usr"
+    fi
 else
     prefix="$PREFIX"
 fi
