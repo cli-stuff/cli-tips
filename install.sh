@@ -74,7 +74,7 @@ $sudo mv cli-tips.sh "$prefix/bin/cli-tips"
 # Set executable permissions
 chmod +x "$prefix/bin/cli-tips"
 
-$sudo mkdir -p "$prefix/share/cli-tips/translations"
+$sudo mkdir -p "$prefix/share/cli-tips/"
 
 # Install translation files to system share directory
 $sudo mv translations/* "$prefix/share/cli-tips/"
