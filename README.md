@@ -1,12 +1,21 @@
-# CLI Tips
+<!-- markdownlint-disable first-line-h1 no-inline-html -->
 
-`cli-tips` is a command-line tool that provides useful tips and commands for Linux users. It can be integrated as a Message of the Day (MOTD) to enhance your terminal experience.
+<div align="center">
+
+![Banner](assets/banner.png)
+
+<p>
+
+`cli-tips` is a command-line tool that provides useful tips and commands for Linux users. It can be integrated as a **Message of the Day** (MOTD) to enhance your terminal experience.
+</p>
+
+</div>
 
 ## ✨ Features
 
 - Displays helpful Linux command tips
 - Supports multiple languages
-- Easy to customize and extend
+- Easy to install and use
 
 ## 📥 Installation
 
@@ -35,7 +44,7 @@ sudo rm -rf $PREFIX/usr/{bin,share}/cli-tips && hash -r
 
 | <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg" alt="Linux logo" width="30"/></div> **Linux** | <div><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Termux.svg" alt="Termux logo" width="30"/></div> **Termux** | <div><img src="https://github.com/okineadev/dotload/raw/refs/heads/main/public/macos-dark-logo.svg#gh-light-mode-only" alt="macOS logo" width="30"/><img src="https://github.com/okineadev/dotload/raw/refs/heads/main/public/macos-light-logo.svg#gh-dark-mode-only" alt="macOS logo" width="30"/></div> **macOS** | <div><img src="https://github.com/okineadev/dotload/assets/81070564/99544c04-51e7-41b5-95f7-0828cfc97617" alt="Windows logo" width="30"/></div> **Windows** (on [msys shell](https://www.msys2.org/)) |
 | :-: | :-: | :-: | :-: |
-| ✅ | ✅ | N/A | N/A |
+| ✅ | ❌ | N/A | N/A |
 
 ## 🚀 Usage
 
@@ -49,6 +58,7 @@ cli-tips
 ```
 
 > [!NOTE]
+>
 > `cli-tips` automatically detects the user's language and displays tips in that language. You can also set the language manually using the `LANG` environment variable.
 
 ### Use Another Language
@@ -67,7 +77,7 @@ LANG=de cli-tips
 # Output: Verwenden Sie 'uniq', um doppelte Zeilen aus einer Datei zu entfernen
 ```
 
-### Specify a Custom Folder with Tips Translations
+<!-- ### Specify a Custom Folder with Tips Translations
 
 To use a custom folder with tips translations, set the `TIPS_FOLDER` environment variable:
 
@@ -90,7 +100,7 @@ Example:
  ├── 📄 tips_en.txt
  ├── 📄 tips_pl.txt
  └── 📄 tips_uk.txt
-```
+``` -->
 
 ## 📝 License
 
