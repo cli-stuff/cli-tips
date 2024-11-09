@@ -22,7 +22,7 @@
 To install `cli-tips`, run the following command:
 
 ```bash
-curl -sL https://cutt.ly/cli-tips-installer | bash
+curl -sL https://raw.githubusercontent.com/cli-stuff/cli-tips/refs/heads/main/install.sh | bash
 ```
 
 <details>
