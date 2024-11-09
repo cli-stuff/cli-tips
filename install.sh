@@ -77,7 +77,7 @@ chmod +x "$prefix/bin/cli-tips"
 $sudo mkdir -p "$prefix/share/cli-tips/translations"
 
 # Install translation files to system share directory
-$sudo mv translations/* "$$prefix/share/cli-tips/"
+$sudo mv translations/* "$prefix/share/cli-tips/"
 
 # Clean up temporary installation files
 rm -rf "$TEMP_DIR"
