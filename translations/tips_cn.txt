@@ -1,0 +1,113 @@
+使用 `alias` 创建自定义命令。例如：alias ll=`ls -la`
+使用 `htop` 实时监控系统资源
+使用 `df -h` 检查可用磁盘空间
+`grep -i` 命令允许不区分大小写搜索
+使用 `crontab -e` 安排自动任务
+使用 `du -sh *` 命令查看当前目录下所有目录的大小
+快速查找文件，使用 `find /path/to/search -name filename`
+使用 `lsblk` 列出所有块设备
+使用 `top` 监控系统进程
+使用 `ps aux` 查看运行进程的详细信息
+使用 `kill` 后跟 PID 终止进程
+使用 `chmod +x script.sh` 使脚本可执行
+使用 `man command` 查看任何命令的手册
+使用 `tldr <command>` 获取简化的帮助页面
+使用 `cp -r` 复制目录
+使用 `mv` 移动或重命名文件
+使用 `rsync` 进行快速可靠的文件同步
+使用 `wget` 从网络下载文件
+使用 `curl -O` 从 URL 下载文件
+使用 `tar -czvf archive.tar.gz directory` 压缩目录
+使用 `tar -xzvf archive.tar.gz` 解压压缩文件
+使用 `sudo` 以超级用户权限执行命令
+使用 `cat` 显示文件内容
+使用 `less` 逐页查看文件内容
+使用 `more` 一次显示一屏文件内容
+使用 `tail -f file` 实时监控文件变化
+使用 `head -n 10 file` 查看文件前 10 行
+使用 `grep` 在文件中搜索
+使用 `cut` 从文件的每行中删除部分内容
+使用 `sort` 对文件行进行排序
+使用 `uniq` 删除文件中的重复行
+使用 `diff` 逐行比较文件
+使用 `find /path -name filename` 按名称搜索文件
+使用 `locate filename` 快速按名称查找文件
+使用 `updatedb` 更新 locate 使用的数据库
+使用 `alias` 创建命令快捷方式
+使用 `export` 设置环境变量
+使用 `echo` 在终端打印文本
+使用 `which command` 查找命令的路径
+使用 `history` 查看命令历史
+使用 `clear` 清除终端屏幕
+使用 `sudo apt update` 更新软件包列表
+使用 `sudo apt upgrade` 升级已安装的软件包
+使用 `sudo apt install <package>` 安装软件包
+使用 `sudo apt remove <package>` 卸载软件包
+使用 `apt-cache search <package>` 搜索软件包
+使用 `dpkg -l` 列出所有已安装的软件包
+使用 `dpkg -S filename` 查找文件属于哪个软件包
+使用 `snap install <package>` 安装 snap 软件包
+使用 `snap list` 列出已安装的 snap 软件包
+使用 `snap remove <package>` 删除 snap 软件包
+使用 `systemctl start <service>` 启动系统服务
+使用 `systemctl stop <service>` 停止系统服务
+使用 `systemctl restart <service>` 重启系统服务
+使用 `systemctl enable <service>` 启用开机自启动服务
+使用 `systemctl disable <service>` 禁用开机自启动服务
+使用 `journalctl` 查看系统日志
+使用 `journalctl -xe` 实时查看日志
+使用 `lsof` 列出打开的文件和进程
+使用 `ufw status` 检查防火墙状态
+使用 `ufw allow <port>` 允许特定端口通过防火墙
+使用 `ufw deny <port>` 阻止特定端口
+使用 `ip addr` 显示网络接口
+使用 `ifconfig` 查看和配置网络接口
+使用 `ping` 测试网络连接
+使用 `netstat` 显示网络连接和路由表
+使用 `traceroute` 跟踪数据包到达目的地的路径
+使用 `nmcli` 通过命令行管理网络连接
+使用 `hostname` 显示或设置系统主机名
+使用 `whoami` 显示当前用户
+使用 `uptime` 检查系统运行时间
+使用 `dmesg` 查看内核和系统消息
+使用 `lscpu` 显示 CPU 架构信息
+使用 `free -h` 查看系统内存使用情况
+使用 `watch` 定期运行命令
+使用 `find /path -type f` 仅搜索文件
+使用 `find /path -type d` 仅搜索目录
+使用 `chmod` 更改文件权限
+使用 `chown` 更改文件所有权
+使用 `useradd` 创建新用户
+使用 `usermod` 修改用户账户
+使用 `passwd` 更改用户密码
+使用 `groupadd` 创建新用户组
+使用 `groupdel` 删除用户组
+使用 `groups` 列出用户所属的组
+使用 `su` 切换到其他用户
+使用 `sudo su` 切换到 root 用户
+使用 `id` 显示用户和组 ID
+使用 `who` 查看谁在登录
+使用 `last` 查看登录历史
+使用 `chroot` 更改根目录
+使用 `tar -czf` 创建压缩档案
+使用 `tar -xzf` 解压压缩档案
+使用 `gzip` 压缩文件
+使用 `gunzip` 解压文件
+使用 `bzip2` 以更高压缩率压缩文件
+使用 `bunzip2` 解压 bzip2 文件
+使用 `xz` 以更高压缩率压缩文件
+使用 `unxz` 解压 xz 文件
+使用 `md5sum` 检查文件的 MD5 校验和
+使用 `sha256sum` 检查文件的 SHA256 校验和
+使用 `ncdu` 进行交互式磁盘使用分析
+使用 `lvm` 管理逻辑卷
+使用 `docker` 管理容器
+使用 `git` 进行版本控制
+使用 `git clone <repository>` 克隆仓库
+使用 `git status` 检查 git 仓库状态
+使用 `git add` 将更改添加到暂存区
+使用 `git commit` 提交更改
+使用 `git push` 将更改推送到远程仓库
+使用 `git pull` 从远程仓库拉取更改
+使用 `git merge` 合并分支
+使用 `git log` 查看提交历史

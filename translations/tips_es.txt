@@ -1,0 +1,113 @@
+Usa `alias` para crear tus propios comandos. Ejemplo: alias ll=`ls -la`
+Usa `htop` para monitorear los recursos del sistema en tiempo real
+Usa `df -h` para verificar el espacio disponible en el disco
+El comando `grep -i` permite búsquedas sin distinguir mayúsculas de minúsculas
+Usa `crontab -e` para programar tareas automáticas
+El comando `du -sh *` ayuda a ver el tamaño de todos los directorios en la carpeta actual
+Para encontrar rápidamente un archivo, usa `find /ruta/a/buscar -name nombre_archivo`
+Usa `lsblk` para listar todos los dispositivos de bloque
+Usa `top` para monitorear los procesos del sistema
+Usa `ps aux` para ver información detallada sobre los procesos en ejecución
+Usa `kill` seguido de un PID para terminar un proceso
+Usa `chmod +x script.sh` para hacer un script ejecutable
+Usa `man comando` para ver el manual de cualquier comando
+Usa `tldr <comando>` para ver páginas de manual simplificadas
+Usa `cp -r` para copiar directorios
+Usa `mv` para mover o renombrar archivos
+Usa `rsync` para una sincronización rápida y confiable de archivos
+Usa `wget` para descargar archivos de internet
+Usa `curl -O` para descargar archivos desde una URL
+Usa `tar -czvf archivo.tar.gz directorio` para comprimir un directorio
+Usa `tar -xzvf archivo.tar.gz` para extraer un archivo comprimido
+Usa `sudo` para ejecutar comandos con privilegios de superusuario
+Usa `cat` para mostrar el contenido de un archivo
+Usa `less` para ver el contenido de un archivo página por página
+Usa `more` para ver el contenido de un archivo una pantalla a la vez
+Usa `tail -f archivo` para monitorear cambios en un archivo en tiempo real
+Usa `head -n 10 archivo` para ver las primeras 10 líneas de un archivo
+Usa `grep` para buscar dentro de archivos
+Usa `cut` para eliminar secciones de cada línea de un archivo
+Usa `sort` para ordenar líneas en un archivo
+Usa `uniq` para eliminar líneas duplicadas de un archivo
+Usa `diff` para comparar archivos línea por línea
+Usa `find /ruta -name nombre_archivo` para buscar archivos por nombre
+Usa `locate nombre_archivo` para encontrar archivos rápidamente por nombre
+Usa `updatedb` para actualizar la base de datos utilizada por locate
+Usa `alias` para crear atajos de comandos
+Usa `export` para establecer variables de entorno
+Usa `echo` para imprimir texto en la terminal
+Usa `which comando` para encontrar la ruta de un comando
+Usa `history` para ver el historial de comandos
+Usa `clear` para limpiar la pantalla de la terminal
+Usa `sudo apt update` para actualizar la lista de paquetes
+Usa `sudo apt upgrade` para actualizar los paquetes instalados
+Usa `sudo apt install <paquete>` para instalar paquetes de software
+Usa `sudo apt remove <paquete>` para desinstalar paquetes
+Usa `apt-cache search <paquete>` para buscar un paquete
+Usa `dpkg -l` para listar todos los paquetes instalados
+Usa `dpkg -S nombre_archivo` para encontrar a qué paquete pertenece un archivo
+Usa `snap install <paquete>` para instalar paquetes snap
+Usa `snap list` para listar los paquetes snap instalados
+Usa `snap remove <paquete>` para eliminar paquetes snap
+Usa `systemctl start <servicio>` para iniciar un servicio del sistema
+Usa `systemctl stop <servicio>` para detener un servicio del sistema
+Usa `systemctl restart <servicio>` para reiniciar un servicio del sistema
+Usa `systemctl enable <servicio>` para habilitar un servicio al inicio
+Usa `systemctl disable <servicio>` para deshabilitar un servicio al inicio
+Usa `journalctl` para ver los registros del sistema
+Usa `journalctl -xe` para ver los registros en tiempo real
+Usa `lsof` para listar archivos y procesos abiertos
+Usa `ufw status` para verificar el estado del firewall
+Usa `ufw allow <puerto>` para permitir un puerto específico a través del firewall
+Usa `ufw deny <puerto>` para bloquear un puerto específico
+Usa `ip addr` para mostrar las interfaces de red
+Usa `ifconfig` para ver y configurar interfaces de red
+Usa `ping` para probar la conectividad de red
+Usa `netstat` para mostrar conexiones de red y tablas de enrutamiento
+Usa `traceroute` para rastrear la ruta que toman los paquetes para llegar a su destino
+Usa `nmcli` para gestionar conexiones de red a través de CLI
+Usa `hostname` para mostrar o establecer el nombre del sistema
+Usa `whoami` para mostrar el usuario actual
+Usa `uptime` para verificar el tiempo de actividad del sistema
+Usa `dmesg` para ver mensajes del núcleo y del sistema
+Usa `lscpu` para mostrar información sobre la arquitectura de la CPU
+Usa `free -h` para ver el uso de la memoria del sistema
+Usa `watch` para ejecutar un comando a intervalos regulares
+Usa `find /ruta -type f` para buscar solo archivos
+Usa `find /ruta -type d` para buscar solo directorios
+Usa `chmod` para cambiar los permisos de un archivo
+Usa `chown` para cambiar la propiedad de un archivo
+Usa `useradd` para crear un nuevo usuario
+Usa `usermod` para modificar cuentas de usuario
+Usa `passwd` para cambiar la contraseña de un usuario
+Usa `groupadd` para crear un nuevo grupo
+Usa `groupdel` para eliminar un grupo
+Usa `groups` para listar los grupos a los que pertenece un usuario
+Usa `su` para cambiar a otro usuario
+Usa `sudo su` para convertirse en el usuario root
+Usa `id` para mostrar los ID de usuario y de grupo
+Usa `who` para ver quién está conectado
+Usa `last` para ver el historial de inicio de sesión
+Usa `chroot` para cambiar el directorio raíz
+Usa `tar -czf` para crear archivos comprimidos
+Usa `tar -xzf` para extraer archivos comprimidos
+Usa `gzip` para comprimir archivos
+Usa `gunzip` para descomprimir archivos gzip
+Usa `bzip2` para comprimir archivos con tasas de compresión más altas
+Usa `bunzip2` para descomprimir archivos bzip2
+Usa `xz` para comprimir archivos con una compresión aún mayor
+Usa `unxz` para descomprimir archivos xz
+Usa `md5sum` para verificar la suma de verificación MD5 de un archivo
+Usa `sha256sum` para verificar la suma de verificación SHA256 de un archivo
+Usa `ncdu` para un analizador interactivo del uso del disco
+Usa `lvm` para gestionar volúmenes lógicos
+Usa `docker` para gestionar contenedores
+Usa `git` para el control de versiones
+Usa `git clone <repositorio>` para clonar un repositorio
+Usa `git status` para verificar el estado de tu repositorio git
+Usa `git add` para agregar cambios al área de preparación
+Usa `git commit` para confirmar cambios
+Usa `git push` para enviar cambios a un repositorio remoto
+Usa `git pull` para obtener cambios de un repositorio remoto
+Usa `git merge` para fusionar ramas
+Usa `git log` para ver el historial de commits
