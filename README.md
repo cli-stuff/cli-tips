@@ -6,7 +6,7 @@
 
 <p>
 
-`cli-tips` is a command-line tool that provides useful tips and commands for Linux users. It can be integrated as a **Message of the Day** (MOTD) to enhance your terminal experience.
+`cli-tips` is a command-line tool offering useful Linux tips and commands, which can be integrated as a **Message of the Day** (MOTD).
 </p>
 
 </div>

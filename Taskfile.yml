@@ -1,7 +1,7 @@
-version: "3"
+version: 3
 
 tasks:
-    debug:
-        cmds:
-            - TIPS_FOLDER=translations ./cli-tips.sh {{.CLI_ARGS}}
-        silent: true
+  debug:
+    cmds:
+      - TIPS_FOLDER=translations ./cli-tips.sh {{.CLI_ARGS}}
+    silent: true

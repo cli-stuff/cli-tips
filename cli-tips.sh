@@ -46,17 +46,14 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 # Find the localized tips file
-localized_file=$(find "$TIPS_FOLDER" -type f -name "${LANGUAGE}.txt" | head -n 1)
-
-# If a localized file is found, use it; otherwise, fall back to English
-if [ -n "$localized_file" ]; then
-    TIPS_FILE="$localized_file"
+if [ -f "$TIPS_FOLDER/${LANGUAGE}.txt" ]; then
+    localized_file="$TIPS_FOLDER/${LANGUAGE}.txt"
 else
-    TIPS_FILE="$TIPS_FOLDER/en.txt"
+    localized_file="$TIPS_FOLDER/en.txt"
 fi
 
 # Read tips from the file into an array
-mapfile -t tips <"$TIPS_FILE"
+mapfile -t tips <"$localized_file"
 
 # Generate random index
 tip_index=$((RANDOM % ${#tips[@]}))

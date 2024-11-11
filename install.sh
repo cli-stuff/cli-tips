@@ -54,20 +54,20 @@ if echo "$OSTYPE" | grep -qE '^(linux-android|msys).*'; then
 fi
 
 # Create temporary directory for installation files
-[[ ! -d "$TEMP_DIR" ]] && mkdir "$TEMP_DIR"
+mkdir -p "$TEMP_DIR"
 cd "$TEMP_DIR"
 
 echo "Downloading cli-tips executable..."
 
 # Download the main executable script from GitHub repository
-curl -LOs "https://raw.githubusercontent.com/$REPO/refs/heads/main/cli-tips.sh"
+curl -sLO "https://raw.githubusercontent.com/$REPO/refs/heads/main/cli-tips.sh"
 
 # Create translations directory and download all translation files
 # Uses GitHub API to get list of files, then downloads each one
 mkdir -p translations
 echo "Downloading translation files..."
 curl -s "https://api.github.com/repos/$REPO/contents/translations" | grep "download_url" | cut -d '"' -f 4 | while read -r url; do
-    lang=$(echo "$url" | grep -o 'tips_[a-z]\+\.txt' | cut -d'_' -f2 | cut -d'.' -f1)
+    lang=$(echo "$url" | grep -o '[a-z]\+\.txt' | cut -d'_' -f2 | cut -d'.' -f1)
 
     echo "- Downloading $lang translation..."
     curl -LOs -C - --output-dir translations "$url"
