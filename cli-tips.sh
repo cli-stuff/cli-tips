@@ -46,13 +46,13 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 # Find the localized tips file
-localized_file=$(find "$TIPS_FOLDER" -type f -name "tips_${LANGUAGE}.txt" | head -n 1)
+localized_file=$(find "$TIPS_FOLDER" -type f -name "${LANGUAGE}.txt" | head -n 1)
 
 # If a localized file is found, use it; otherwise, fall back to English
 if [ -n "$localized_file" ]; then
     TIPS_FILE="$localized_file"
 else
-    TIPS_FILE="$TIPS_FOLDER/tips_en.txt"
+    TIPS_FILE="$TIPS_FOLDER/en.txt"
 fi
 
 # Read tips from the file into an array
