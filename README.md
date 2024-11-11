@@ -77,6 +77,21 @@ LANG=de cli-tips
 # Output: Verwenden Sie 'uniq', um doppelte Zeilen aus einer Datei zu entfernen
 ```
 
+### Available Languages
+
+Here is a list of all available languages:
+
+- [🇨🇳 Chinese](translations/cn.txt)
+- [🇩🇪 German](translations/de.txt)
+- [🇺🇦 Ukrainian](translations/uk.txt)
+- [🇯🇵 Japanese](translations/ja.txt)
+- [🇰🇷 Korean](translations/ko.txt)
+- [🇵🇱 Polish](translations/pl.txt)
+- [🇮🇹 Italian](translations/it.txt)
+- [🇸🇦 Arabic](translations/ar.txt)
+- [🇮🇷 Farsi](translations/fa.txt)
+- [🇪🇸 Spanish](translations/es.txt)
+
 <!-- ### Specify a Custom Folder with Tips Translations
 
 To use a custom folder with tips translations, set the `TIPS_FOLDER` environment variable:
