@@ -81,16 +81,16 @@ LANG=de cli-tips
 
 Here is a list of all available languages:
 
-- [🇨🇳 Chinese](translations/cn.txt)
-- [🇩🇪 German](translations/de.txt)
-- [🇺🇦 Ukrainian](translations/uk.txt)
-- [🇯🇵 Japanese](translations/ja.txt)
-- [🇰🇷 Korean](translations/ko.txt)
-- [🇵🇱 Polish](translations/pl.txt)
-- [🇮🇹 Italian](translations/it.txt)
-- [🇸🇦 Arabic](translations/ar.txt)
-- [🇮🇷 Farsi](translations/fa.txt)
-- [🇪🇸 Spanish](translations/es.txt)
+- [🇨🇳 Chinese](translations/cn.txt) (`cn`)
+- [🇩🇪 German](translations/de.txt) (`de`)
+- [🇺🇦 Ukrainian](translations/uk.txt) (`uk`)
+- [🇯🇵 Japanese](translations/ja.txt) (`ja`)
+- [🇰🇷 Korean](translations/ko.txt) (`ko`)
+- [🇵🇱 Polish](translations/pl.txt) (`pl`)
+- [🇮🇹 Italian](translations/it.txt) (`it`)
+- [🇸🇦 Arabic](translations/ar.txt) (`ar`)
+- [🇮🇷 Farsi](translations/fa.txt) (`fa`)
+- [🇪🇸 Spanish](translations/es.txt) (`es`)
 
 <!-- ### Specify a Custom Folder with Tips Translations
 
