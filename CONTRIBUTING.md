@@ -6,7 +6,7 @@ Thank you for considering contributing to cli-tips! We welcome contributions fro
 
 ### Reporting Issues
 
-If you encounter any issues or have suggestions for improvements, please [open an issue on GitHub](https://github.com/cli-stuff/cli-tips/issues/new). Provide as much detail as possible to help us understand and address the problem.
+If you encounter any issues or have suggestions for improvements, please [open an issue on GitHub](https://github.com/cli-stuff/cli-tips/issues/new/choose). Provide as much detail as possible to help us understand and address the problem.
 
 ### Adding Translations for Tips
 
