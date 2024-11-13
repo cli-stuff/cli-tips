@@ -33,7 +33,7 @@ curl -sL https://bit.ly/cli-tips-installer | bash
 To uninstall `cli-tips`, run the following command:
 
 ```bash
-sudo rm -rf $PREFIX/usr/{bin,share}/cli-tips && hash -r
+sudo rm -rf ${PREFIX:-/usr}/{bin,share}/cli-tips && hash -r
 ```
 
 > **ℹ️ Note**: If you want to remove this tool from **Termux**, run the above command without `sudo`.
