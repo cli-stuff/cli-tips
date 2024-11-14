@@ -2,11 +2,12 @@
 
 <div align="center">
 
-![Banner](assets/banner.png)
+![CLI Tips Banner](assets/banner.png)
 
 <p>
 
 `cli-tips` is a command-line tool offering useful Linux tips and commands, which can be integrated as a **Message of the Day** (MOTD).
+
 </p>
 
 </div>
@@ -36,15 +37,17 @@ To uninstall `cli-tips`, run the following command:
 sudo rm -rf ${PREFIX:-/usr$([ "$(uname)" = "Darwin" ] && echo "/local")}/{bin,share}/cli-tips && hash -r
 ```
 
-> **ℹ️ Note**: If you want to remove this tool from **Termux**, run the above command without `sudo`.
+> **ℹ️ Note**:
+>
+> If you want to remove this tool from **Termux**, run the above command without `sudo`.
 
 </details>
 
 ### Compatibility table
 
 | <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg" alt="Linux logo" width="30"/></div> **Linux** | <div><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Termux.svg" alt="Termux logo" width="30"/></div> **Termux** | <div><img src="https://github.com/okineadev/dotload/raw/refs/heads/main/public/macos-dark-logo.svg#gh-light-mode-only" alt="macOS logo" width="30"/><img src="https://github.com/okineadev/dotload/raw/refs/heads/main/public/macos-light-logo.svg#gh-dark-mode-only" alt="macOS logo" width="30"/></div> **macOS** | <div><img src="https://github.com/okineadev/dotload/assets/81070564/99544c04-51e7-41b5-95f7-0828cfc97617" alt="Windows logo" width="30"/></div> **Windows** (on [msys shell](https://www.msys2.org/)) |
-| :-: | :-: | :-: | :-: |
-| ✅ | ✅ | ✅ | ✅ |
+| :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                   ✅                                                                    |                                                               ✅                                                               |                                                                                                                                                         ✅                                                                                                                                                          |                                                                                                  ✅                                                                                                   |
 
 ## 🚀 Usage
 
@@ -81,16 +84,19 @@ LANG=de cli-tips
 
 Here is a list of all available languages:
 
-- [🇨🇳 Chinese](translations/cn.txt) (`cn`)
-- [🇩🇪 German](translations/de.txt) (`de`)
-- [🇺🇦 Ukrainian](translations/uk.txt) (`uk`)
-- [🇯🇵 Japanese](translations/ja.txt) (`ja`)
-- [🇰🇷 Korean](translations/ko.txt) (`ko`)
-- [🇵🇱 Polish](translations/pl.txt) (`pl`)
-- [🇮🇹 Italian](translations/it.txt) (`it`)
-- [🇸🇦 Arabic](translations/ar.txt) (`ar`)
-- [🇮🇷 Farsi](translations/fa.txt) (`fa`)
-- [🇪🇸 Spanish](translations/es.txt) (`es`)
+| Language                            | Code |
+| ----------------------------------- | :--: |
+| [🇸🇦 Arabic](translations/ar.txt)    | `ar` |
+| [🇨🇳 Chinese](translations/cn.txt)   | `cn` |
+| [🇩🇪 German](translations/de.txt)    | `de` |
+| [🇬🇧 English](translations/en.txt)   | `en` |
+| [🇮🇷 Farsi](translations/fa.txt)     | `fa` |
+| [🇮🇹 Italian](translations/it.txt)   | `it` |
+| [🇯🇵 Japanese](translations/ja.txt)  | `ja` |
+| [🇰🇷 Korean](translations/ko.txt)    | `ko` |
+| [🇵🇱 Polish](translations/pl.txt)    | `pl` |
+| [🇪🇸 Spanish](translations/es.txt)   | `es` |
+| [🇺🇦 Ukrainian](translations/uk.txt) | `uk` |
 
 <!-- ### Specify a Custom Folder with Tips Translations
 
