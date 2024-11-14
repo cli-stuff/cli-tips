@@ -27,6 +27,28 @@ else
     LANGUAGE="$TIPS_LANGUAGE"
 fi
 
+show_help() {
+    echo -e "\e[1mUsage:\e[0m $(basename "$0") \e[1;34m[flags]\e[0m \e[1;32m[options]\e[0m"
+    echo
+    echo -e "\e[1mOptions:\e[0m"
+    echo -e "  \e[1;34m-h, --help\e[0m                  Show this help message and exit"
+    echo -e "  \e[1;34m-l, --lang, --language\e[0m      Specify the language for tips"
+    echo
+    echo -e "\e[1mAvailable Languages:\e[0m"
+    printf "  "
+    for file in "$TIPS_FOLDER"/*.txt; do
+        filename=$(basename "$file" .txt)
+        echo -en "\e[1;32m$filename\e[0m "
+    done
+    echo -e "\n"
+    echo -e "\e[1mExamples:\e[0m"
+    echo -e "  $(basename "$0") \e[1;34m--language\e[0m en"
+    echo -e "  $(basename "$0") \e[1;34m--language\e[0m es"
+    echo
+    echo
+    echo -e "\e[1mGitHub:\e[0m \e[0;30mhttps://github.com/cli-stuff/cli-tips\e[0m"
+}
+
 # Parse command-line options
 while [[ "$#" -gt 0 ]]; do
     case $1 in
@@ -37,8 +59,12 @@ while [[ "$#" -gt 0 ]]; do
     --language=* | --lang=*)
         LANGUAGE="${1#*=}"
         ;;
+    -h | --help)
+        show_help
+        exit 0
+        ;;
     *)
-        echo "Unknown parameter passed: $1"
+        echo "Unknown option: $1"
         exit 1
         ;;
     esac
