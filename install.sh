@@ -45,6 +45,7 @@ TEMP_DIR="$TEMP/cli-tips-installer"
 # GitHub repository path
 REPO="cli-stuff/cli-tips"
 
+# Define the sudo command, which may be empty on systems where sudo is not required
 sudo="sudo"
 
 # shellcheck disable=SC2143,SC2034
