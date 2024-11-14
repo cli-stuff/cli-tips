@@ -8,7 +8,7 @@
 4. **Ensure Compatibility**: Make sure the code is compatible with the project's existing codebase and dependencies.
 5. **Handle Errors Gracefully**: Implement proper error handling to ensure the code can handle unexpected situations without crashing.
 
-## Translation Guidelines (for [translations/*.txt](/translations/) files)
+## Translation Guidelines (for [translations/\*.txt](/translations/) files)
 
 1. **Maintain Accuracy**: Ensure that translations are accurate and convey the same meaning as the original text.
 2. **Use Appropriate Terminology**: Use terminology that is appropriate for the target language and audience.
