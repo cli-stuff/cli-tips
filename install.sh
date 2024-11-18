@@ -1,25 +1,10 @@
 #!/usr/bin/env bash
 
+# shellcheck disable=SC2236
+
 # ====================================================================================
 # cli-tips Installation Script
 # ====================================================================================
-#
-# This script installs the cli-tips utility and its translations from GitHub.
-#
-# Installation Process:
-#   1. Creates a temporary directory for installation
-#   2. Downloads the main executable from GitHub
-#   3. Downloads translation files from GitHub repository
-#   4. Installs the executable to $PREFIX/usr/bin
-#   5. Installs translations to $PREFIX/usr/share/cli-tips/translations
-#   6. Cleans up temporary files
-#
-# Note:
-#   - Requires write permissions to $PREFIX directory
-#   - Script will exit on first error (set -e)
-# ====================================================================================
-
-# shellcheck disable=SC2236
 
 # Exit on any error
 set -e
