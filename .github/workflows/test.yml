@@ -1,0 +1,19 @@
+name: Run Bats Tests
+
+# Trigger the workflow on push events to cli-tips.sh
+on:
+  push:
+    paths:
+      - "cli-tips.sh"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 🧪 Run Bats Tests
+        run: npx bats test/cli-tips.bats
