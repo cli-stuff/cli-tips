@@ -12,7 +12,8 @@ set -e
 # Determine the installation prefix
 if [[ ! -n "$PREFIX" ]]; then
     if echo "$OSTYPE" | grep -qE '^darwin.*'; then
-        # The `/usr` directory in macOS is read-only, so you need to change the prefix to `/usr/local`
+        # The `/usr` directory in macOS is read-only
+        # so you need to change the prefix to `/usr/local`
         # https://github.com/openstreetmap/mod_tile/issues/349#issuecomment-1784165860
         prefix="/usr/local"
     else
@@ -43,21 +44,32 @@ fi
 mkdir -p "$TEMP_DIR"
 cd "$TEMP_DIR"
 
-echo "Downloading cli-tips executable..."
-
 # Download the main executable script from GitHub repository
-curl -sLO "https://raw.githubusercontent.com/$REPO/refs/heads/main/cli-tips.sh"
+echo "Downloading cli-tips executable..."
+curl -sLO "https://raw.githubusercontent.com/$REPO/refs/heads/main/cli-tips.sh" &
 
-# Create translations directory and download all translation files
-# Uses GitHub API to get list of files, then downloads each one
+# Create translations directory
 mkdir -p translations
-echo "Downloading translation files..."
-curl -s "https://api.github.com/repos/$REPO/contents/translations" | grep "download_url" | cut -d '"' -f 4 | while read -r url; do
-    lang=$(echo "$url" | grep -o '[a-z]\+\.txt' | cut -d'_' -f2 | cut -d'.' -f1)
 
+# Get list of translation files and download them in parallel
+echo "Downloading translation files..."
+download_urls=$(curl -s "https://api.github.com/repos/$REPO/contents/translations" | grep "download_url" | cut -d '"' -f 4)
+
+# Function to download a single translation file
+download_translation() {
+    local url="$1"
+    local lang=$(echo "$url" | grep -o '[a-z]\+\.txt' | cut -d'_' -f2 | cut -d'.' -f1)
     echo "- Downloading $lang translation..."
     curl -LOs -C - --output-dir translations "$url"
+}
+
+# Start parallel downloads
+for url in $download_urls; do
+    download_translation "$url" &
 done
+
+# Wait for all downloads to complete
+wait
 
 echo ""
 
@@ -67,10 +79,8 @@ $sudo mv cli-tips.sh "$prefix/bin/cli-tips"
 # Set executable permissions
 chmod +x "$prefix/bin/cli-tips"
 
-$sudo mkdir -p "$prefix/share/cli-tips/"
-
-# Install translation files to system share directory
-$sudo mv translations/* "$prefix/share/cli-tips/"
+$sudo mkdir -p "$prefix/share/cli-tips"
+$sudo mv translations/* "$prefix/share/cli-tips"
 
 # Clean up temporary installation files
 rm -rf "$TEMP_DIR"
