@@ -15,5 +15,8 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
 
+      - name: ⚙️ Install dependencies
+        run: sudo apt install parallels
+
       - name: 🧪 Run Bats Tests
-        run: npx bats test/cli-tips.bats
+        run: npx bats test/cli-tips.bats --jobs $(nproc)
