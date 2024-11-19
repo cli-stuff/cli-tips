@@ -33,6 +33,7 @@ show_help() {
     echo -e "\e[1mOptions:\e[0m"
     echo -e "  \e[1;34m-h, --help\e[0m                  Show this help message and exit"
     echo -e "  \e[1;34m-l, --lang, --language\e[0m      Specify the language for tips"
+    echo -e "  \e[1;34m--about\e[0m                     Specify a keyword to filter tips"
     echo
     echo -e "\e[1mAvailable Languages:\e[0m"
     printf "  "
@@ -44,6 +45,7 @@ show_help() {
     echo -e "\e[1mExamples:\e[0m"
     echo -e "  $(basename "$0") \e[1;34m--language\e[0m en"
     echo -e "  $(basename "$0") \e[1;34m--language\e[0m es"
+    echo -e "  $(basename "$0") \e[1;34m--about\e[0m git"
     echo
     echo
     echo -e "\e[1mGitHub:\e[0m \e[0;30mhttps://github.com/cli-stuff/cli-tips\e[0m"
@@ -58,6 +60,10 @@ while [[ "$#" -gt 0 ]]; do
         ;;
     --language=* | --lang=*)
         LANGUAGE="${1#*=}"
+        ;;
+    --about)
+        KEYWORD="$2"
+        shift
         ;;
     -h | --help)
         show_help
@@ -80,6 +86,22 @@ fi
 
 # Read tips from the file into an array
 mapfile -t tips <"$localized_file"
+
+# Filter tips based on the specified keyword
+if [ -n "$KEYWORD" ]; then
+    filtered_tips=()
+    for tip in "${tips[@]}"; do
+        if [[ "$tip" == *"$KEYWORD"* ]]; then
+            filtered_tips+=("$tip")
+        fi
+    done
+    tips=("${filtered_tips[@]}")
+fi
+
+# If there are no matching tips, exit
+if [ ${#tips[@]} -eq 0 ]; then
+    exit 0
+fi
 
 # Generate random index
 tip_index=$((RANDOM % ${#tips[@]}))

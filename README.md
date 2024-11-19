@@ -80,6 +80,17 @@ LANG=de cli-tips
 # Output: Verwenden Sie 'uniq', um doppelte Zeilen aus einer Datei zu entfernen
 ```
 
+### Use the `--about` Flag
+
+To display a random tip containing a specific keyword, use the `--about` option:
+
+```bash
+cli-tips --about=git
+# Output: Use 'git status' to check the status of your git repository
+```
+
+If no tips contain the specified keyword, no tip will be output.
+
 ### Available Languages
 
 Here is a list of all available languages:
