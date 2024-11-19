@@ -20,9 +20,11 @@ if [ ! -n "$TIPS_FOLDER" ]; then
     TIPS_FOLDER="$prefix/share/cli-tips"
 fi
 
+SYSTEM_LANGUAGE="$(echo "$LANG" | cut -d'_' -f1)"
+
 # Default language is based on the user's environment
 if [ ! -n "$TIPS_LANGUAGE" ]; then
-    LANGUAGE="$(echo "$LANG" | cut -d'_' -f1)"
+    LANGUAGE="$SYSTEM_LANGUAGE"
 else
     LANGUAGE="$TIPS_LANGUAGE"
 fi
@@ -56,6 +58,10 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
     -l | --language | --lang)
         LANGUAGE="$2"
+        if [[ ! -n "$LANGUAGE" ]]; then
+            echo "Error: No language specified"
+            exit 1
+        fi
         shift
         ;;
     --language=* | --lang=*)
@@ -76,6 +82,11 @@ while [[ "$#" -gt 0 ]]; do
     esac
     shift
 done
+
+if [[ ! -n "$LANGUAGE" ]]; then
+    echo "Error: No language specified"
+    exit 1
+fi
 
 # Find the localized tips file
 if [ -f "$TIPS_FOLDER/${LANGUAGE}.txt" ]; then
