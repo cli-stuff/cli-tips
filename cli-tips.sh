@@ -5,6 +5,7 @@
 # Exit on any error
 set -e
 
+# Determine prefix
 if [[ ! -n "$PREFIX" ]]; then
     if echo "$OSTYPE" | grep -qE '^darwin.*'; then
         prefix="/usr/local"
@@ -16,18 +17,12 @@ else
 fi
 
 # Default tips folder
-if [ ! -n "$TIPS_FOLDER" ]; then
-    TIPS_FOLDER="$prefix/share/cli-tips"
-fi
+TIPS_FOLDER="${TIPS_FOLDER:-$prefix/share/cli-tips}"
 
 SYSTEM_LANGUAGE="$(echo "$LANG" | cut -d'_' -f1)"
 
 # Default language is based on the user's environment
-if [ ! -n "$TIPS_LANGUAGE" ]; then
-    LANGUAGE="$SYSTEM_LANGUAGE"
-else
-    LANGUAGE="$TIPS_LANGUAGE"
-fi
+LANGUAGE="${TIPS_LANGUAGE:-$SYSTEM_LANGUAGE}"
 
 show_help() {
     echo -e "\e[1mUsage:\e[0m $(basename "$0") \e[1;34m[flags]\e[0m \e[1;32m[options]\e[0m"
@@ -57,17 +52,21 @@ show_help() {
 while [[ "$#" -gt 0 ]]; do
     case $1 in
     -l | --language | --lang)
-        LANGUAGE="$2"
-        if [[ ! -n "$LANGUAGE" ]]; then
+        if [[ -z "$2" ]]; then
             echo "Error: No language specified"
             exit 1
         fi
+        LANGUAGE="$2"
         shift
         ;;
     --language=* | --lang=*)
         LANGUAGE="${1#*=}"
         ;;
     --about)
+        if [[ -z "$2" ]]; then
+            echo "Error: No keyword specified"
+            exit 1
+        fi
         KEYWORD="$2"
         shift
         ;;
@@ -83,11 +82,6 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-if [[ ! -n "$LANGUAGE" ]]; then
-    echo "Error: No language specified"
-    exit 1
-fi
-
 # Find the localized tips file
 if [ -f "$TIPS_FOLDER/${LANGUAGE}.txt" ]; then
     localized_file="$TIPS_FOLDER/${LANGUAGE}.txt"
@@ -102,7 +96,7 @@ mapfile -t tips <"$localized_file"
 if [ -n "$KEYWORD" ]; then
     filtered_tips=()
     for tip in "${tips[@]}"; do
-        if [[ "$tip" == *"$KEYWORD"* ]]; then
+        if [[ "$tip" =~ $KEYWORD ]]; then
             filtered_tips+=("$tip")
         fi
     done
