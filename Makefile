@@ -1,4 +1,7 @@
-.PHONY: debug
+.PHONY: debug tests
 
 debug:
-	@TIPS_FOLDER=translations ./cli-tips.sh $(ARGS)
+	@./scripts/debug.sh $(ARGS)
+
+tests:
+	@./script/test.sh

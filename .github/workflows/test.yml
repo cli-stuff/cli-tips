@@ -19,8 +19,8 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           sparse-checkout: |
-            test/
+            tests/
             cli-tips.sh
 
       - name: 🧪 Run Bats Tests
-        run: npx bats test/cli-tips.bats
+        run: npx bats tests/cli-tips.bats
