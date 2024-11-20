@@ -22,8 +22,5 @@ jobs:
             test/
             cli-tips.sh
 
-      # - name: ⚙️ Install dependencies
-      #   run: sudo apt install parallels
-
       - name: 🧪 Run Bats Tests
-        run: npx bats test/cli-tips.bats --jobs $(nproc)
+        run: npx bats test/cli-tips.bats
