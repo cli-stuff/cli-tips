@@ -6,6 +6,9 @@ on:
     paths:
       - "cli-tips.sh"
 
+  # For debugging 🐛🔍
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,8 +18,8 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
-      - name: ⚙️ Install dependencies
-        run: sudo apt install parallels
+      # - name: ⚙️ Install dependencies
+      #   run: sudo apt install parallels
 
       - name: 🧪 Run Bats Tests
         run: npx bats test/cli-tips.bats --jobs $(nproc)
