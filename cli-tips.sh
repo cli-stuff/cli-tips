@@ -43,8 +43,7 @@ show_help() {
     echo -e "  $(basename "$0") \e[1;34m--language\e[0m en"
     echo -e "  $(basename "$0") \e[1;34m--language\e[0m es"
     echo -e "  $(basename "$0") \e[1;34m--about\e[0m git"
-    echo
-    echo
+    echo -e "\n"
     echo -e "\e[1mGitHub:\e[0m \e[0;30mhttps://github.com/cli-stuff/cli-tips\e[0m"
 }
 
