@@ -24,6 +24,11 @@ SYSTEM_LANGUAGE="$(echo "$LANG" | cut -d'_' -f1)"
 # Default language is based on the user's environment
 LANGUAGE="${TIPS_LANGUAGE:-$SYSTEM_LANGUAGE}"
 
+error() {
+    echo "ERROR: $1"
+    exit 1
+}
+
 show_help() {
     echo -e "\e[1mUsage:\e[0m $(basename "$0") \e[1;34m[flags]\e[0m \e[1;32m[options]\e[0m"
     echo
@@ -52,8 +57,7 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
     -l | --language | --lang)
         if [[ -z "$2" ]]; then
-            echo "Error: No language specified"
-            exit 1
+            error "No language specified"
         fi
         LANGUAGE="$2"
         shift
@@ -63,8 +67,7 @@ while [[ "$#" -gt 0 ]]; do
         ;;
     --about)
         if [[ -z "$2" ]]; then
-            echo "Error: No keyword specified"
-            exit 1
+            error "No keyword specified"
         fi
         KEYWORD="$2"
         shift
@@ -74,31 +77,35 @@ while [[ "$#" -gt 0 ]]; do
         exit 0
         ;;
     *)
-        echo "Unknown option: $1"
-        exit 1
+        error "Unknown option: $1"
         ;;
     esac
     shift
 done
 
+# Check if the TIPS_FOLDER directory exists
+if [ ! -d "$TIPS_FOLDER" ]; then
+    error "Tips folder '$TIPS_FOLDER' does not exist."
+fi
+
 # Find the localized tips file
 if [ -f "$TIPS_FOLDER/${LANGUAGE}.txt" ]; then
     localized_file="$TIPS_FOLDER/${LANGUAGE}.txt"
 else
+    echo "Language file '$TIPS_FOLDER/${LANGUAGE}.txt' does not exist. Using default language 'en'."
     localized_file="$TIPS_FOLDER/en.txt"
 fi
 
 # Read tips from the file into an array
-mapfile -t tips <"$localized_file"
+if ! mapfile -t tips <"$localized_file"; then
+    error "Failed to read tips from file '$localized_file'."
+fi
 
 # Filter tips based on the specified keyword
 if [ -n "$KEYWORD" ]; then
-    filtered_tips=()
-    for tip in "${tips[@]}"; do
-        if [[ "$tip" =~ $KEYWORD ]]; then
-            filtered_tips+=("$tip")
-        fi
-    done
+    if ! filtered_tips=$(grep -i "$KEYWORD" <<<"${tips[@]}"); then
+        error "Failed to filter tips with keyword '$KEYWORD'."
+    fi
     tips=("${filtered_tips[@]}")
 fi
 
