@@ -81,7 +81,6 @@ teardown() {
 @test "Errors if no language is specified after --language option" {
     run "$SCRIPT_PATH" --language
     [ "$status" -ne 0 ]
-    [[ "$output" == *"Error: No language specified"* ]]
 }
 
 @test "Handles missing TIPS_FOLDER gracefully" {

@@ -22,10 +22,10 @@ TIPS_FOLDER="${TIPS_FOLDER:-$prefix/share/cli-tips}"
 SYSTEM_LANGUAGE="$(echo "$LANG" | cut -d'_' -f1)"
 
 # Default language is based on the user's environment
-LANGUAGE="${TIPS_LANGUAGE:-$SYSTEM_LANGUAGE}"
+LANGUAGE="${TIPS_LANGUAGE:-${SYSTEM_LANGUAGE:-en}}"
 
 error() {
-    echo "ERROR: $1"
+    echo "ERROR: $1" >&2
     exit 1
 }
 
@@ -92,7 +92,7 @@ fi
 if [ -f "$TIPS_FOLDER/${LANGUAGE}.txt" ]; then
     localized_file="$TIPS_FOLDER/${LANGUAGE}.txt"
 else
-    echo "Language file '$TIPS_FOLDER/${LANGUAGE}.txt' does not exist. Using default language 'en'."
+    # echo "Language file '$TIPS_FOLDER/${LANGUAGE}.txt' does not exist. Using default language 'en'."
     localized_file="$TIPS_FOLDER/en.txt"
 fi
 
@@ -103,9 +103,14 @@ fi
 
 # Filter tips based on the specified keyword
 if [ -n "$KEYWORD" ]; then
-    if ! filtered_tips=$(grep -i "$KEYWORD" <<<"${tips[@]}"); then
-        error "Failed to filter tips with keyword '$KEYWORD'."
-    fi
+    filtered_tips=()
+
+    for tip in "${tips[@]}"; do
+        if [[ "$tip" =~ $KEYWORD ]]; then
+            filtered_tips+=("$tip")
+        fi
+    done
+
     tips=("${filtered_tips[@]}")
 fi
 
