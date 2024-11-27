@@ -43,6 +43,16 @@ sudo rm -rf ${PREFIX:-/usr$([ "$(uname)" = "Darwin" ] && echo "/local")}/{bin,sh
 
 </details>
 
+<details>
+<summary>
+    <h4>❄️ Nix</h4>
+</summary>
+
+For Nix the package manager, the package name is `cli-tips`. You should consult [the Nix manual](https://nixos.org/manual/nixpkgs/stable/#sec-declarative-package-management)
+on how to properly install packages.
+
+</details>
+
 ### Compatibility table
 
 | <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg" alt="Linux logo" width="30"/></div> **Linux** | <div><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Termux.svg" alt="Termux logo" width="30"/></div> **Termux** | <div><img src="https://github.com/okineadev/dotload/raw/refs/heads/main/public/macos-dark-logo.svg#gh-light-mode-only" alt="macOS logo" width="30"/><img src="https://github.com/okineadev/dotload/raw/refs/heads/main/public/macos-light-logo.svg#gh-dark-mode-only" alt="macOS logo" width="30"/></div> **macOS** | <div><img src="https://github.com/okineadev/dotload/assets/81070564/99544c04-51e7-41b5-95f7-0828cfc97617" alt="Windows logo" width="30"/></div> **Windows** (on [msys shell](https://www.msys2.org/)) |
