@@ -148,6 +148,13 @@ Example:
 
 This project is fully free and you can do anything you want with it, even without mentioning this repository or license. Enjoy! 🚀
 
+## ❤️ Support
+
+If you like this project, consider supporting it by starring ⭐ it on GitHub, sharing it with your friends, or buying me a coffee ☕:
+
+- <https://send.monobank.ua/jar/6rUVs4yasg>
+- <https://donatello.to/okineadev>
+
 ## 🤝 Contributing
 
 We welcome contributions from everyone. If you would like to contribute, please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed instructions on how to add translations and other contributions.
