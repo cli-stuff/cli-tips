@@ -150,10 +150,7 @@ This project is fully free and you can do anything you want with it, even withou
 
 ## ❤️ Support
 
-If you like this project, consider supporting it by starring ⭐ it on GitHub, sharing it with your friends, or buying me a coffee ☕:
-
-- <https://send.monobank.ua/jar/6rUVs4yasg>
-- <https://donatello.to/okineadev>
+If you like this project, consider supporting it by starring ⭐ it on GitHub, sharing it with your friends, or [buying me a coffee ☕](https://github.com/cli-stuff/cli-tips?sponsor=1)
 
 ## 🤝 Contributing
 
