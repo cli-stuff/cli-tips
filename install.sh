@@ -47,31 +47,24 @@ cd "$TEMP_DIR"
 # Download the main executable script from GitHub repository
 echo "Downloading cli-tips executable..."
 curl -sLO "https://raw.githubusercontent.com/$REPO/refs/heads/main/cli-tips.sh" &
+pid1=$!
 
-# Create translations directory
-mkdir -p translations
+echo "Downloading tips list..."
+curl -sLO "https://raw.githubusercontent.com/$REPO/refs/heads/main/tips.txt" &
+pid2=$!
 
-# Get list of translation files and download them in parallel
-echo "Downloading translation files..."
-download_urls=$(curl -s "https://api.github.com/repos/$REPO/contents/translations" | grep "download_url" | cut -d '"' -f 4)
+wait $pid1
+status1=$?
+wait $pid2
+status2=$?
 
-# Function to download a single translation file
-download_translation() {
-    local url="$1"
-    local lang=$(echo "$url" | grep -o '[a-z]\+\.txt' | cut -d'_' -f2 | cut -d'.' -f1)
-    echo "- Downloading $lang translation..."
-    curl -LOs -C - --output-dir translations "$url"
-}
+if [[ $status1 -ne 0 || $status2 -ne 0 ]]; then
+    echo "Error: Failed to download required files." >&2
+    rm -rf "$TEMP_DIR"
+    exit 1
+fi
 
-# Start parallel downloads
-for url in $download_urls; do
-    download_translation "$url" &
-done
-
-# Wait for all downloads to complete
-wait
-
-echo ""
+echo
 
 echo "Installing..."
 # Install the main executable to system bin directory
@@ -80,7 +73,7 @@ $sudo mv cli-tips.sh "$prefix/bin/cli-tips"
 chmod +x "$prefix/bin/cli-tips"
 
 $sudo mkdir -p "$prefix/share/cli-tips"
-$sudo mv translations/* "$prefix/share/cli-tips"
+$sudo mv tips.txt "$prefix/share/cli-tips"
 
 # Clean up temporary installation files
 rm -rf "$TEMP_DIR"

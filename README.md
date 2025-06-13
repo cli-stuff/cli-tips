@@ -4,18 +4,13 @@
 
 ![CLI Tips Banner](assets/banner.png)
 
-<p>
-
 `cli-tips` is a command-line tool offering useful Linux tips and commands, which can be integrated as a **Message of the Day** (MOTD).
-
-</p>
 
 </div>
 
 ## ✨ Features
 
 - Displays helpful Linux command tips
-- Supports multiple languages
 - Easy to install and use
 
 ## 📥 Installation
@@ -70,26 +65,6 @@ cli-tips
 # Use 'uniq' to remove duplicate lines from a file
 ```
 
-> [!NOTE]
->
-> `cli-tips` automatically detects the user's language and displays tips in that language. You can also set the language manually using the `LANG` environment variable.
-
-### Use Another Language
-
-To display tips in a different language, use the `--lang` option:
-
-```bash
-cli-tips --lang=uk
-# Output: Використовуйте 'uniq', щоб видалити дубльовані рядки з файлу
-```
-
-You can also use the `LANG` environment variable:
-
-```bash
-LANG=de cli-tips
-# Output: Verwenden Sie 'uniq', um doppelte Zeilen aus einer Datei zu entfernen
-```
-
 ### Use the `--about` Flag
 
 To display a random tip containing a specific keyword, use the `--about` option:
@@ -101,49 +76,6 @@ cli-tips --about=git
 
 If no tips contain the specified keyword, no tip will be output.
 
-### Available Languages
-
-Here is a list of all available languages:
-
-| Language                            | Code |
-| ----------------------------------- | :--: |
-| [🇸🇦 Arabic](translations/ar.txt)    | `ar` |
-| [🇨🇳 Chinese](translations/cn.txt)   | `cn` |
-| [🇩🇪 German](translations/de.txt)    | `de` |
-| [🇬🇧 English](translations/en.txt)   | `en` |
-| [🇮🇷 Farsi](translations/fa.txt)     | `fa` |
-| [🇮🇹 Italian](translations/it.txt)   | `it` |
-| [🇯🇵 Japanese](translations/ja.txt)  | `ja` |
-| [🇰🇷 Korean](translations/ko.txt)    | `ko` |
-| [🇵🇱 Polish](translations/pl.txt)    | `pl` |
-| [🇪🇸 Spanish](translations/es.txt)   | `es` |
-| [🇺🇦 Ukrainian](translations/uk.txt) | `uk` |
-
-<!-- ### Specify a Custom Folder with Tips Translations
-
-To use a custom folder with tips translations, set the `TIPS_FOLDER` environment variable:
-
-```bash
-TIPS_FOLDER=/path/to/tips cli-tips --lang=veryrarelanguage
-# Output: <Tip in veryrarelanguage>
-```
-
-By default, `cli-tips` uses the built-in tips folder. The custom folder should contain text files in the following format:
-
-```plaintext
-tips_<lang_id>.txt
-```
-
-Example:
-
-```plaintext
-📂 translations/
- ├── 📄 tips_de.txt
- ├── 📄 tips_en.txt
- ├── 📄 tips_pl.txt
- └── 📄 tips_uk.txt
-``` -->
-
 ## 📝 License
 
 This project is fully free and you can do anything you want with it, even without mentioning this repository or license. Enjoy! 🚀
@@ -154,4 +86,4 @@ If you like this project, consider supporting it by starring ⭐ it on GitHub, s
 
 ## 🤝 Contributing
 
-We welcome contributions from everyone. If you would like to contribute, please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed instructions on how to add translations and other contributions.
+We welcome contributions from everyone. If you would like to contribute, please read our [CONTRIBUTING.md](CONTRIBUTING.md)
