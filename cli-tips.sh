@@ -26,17 +26,16 @@ error() {
 }
 
 show_help() {
-    echo -e "\e[1mUsage:\e[0m $(basename "$0") \e[1;34m[flags]\e[0m \e[1;32m[options]\e[0m"
+    echo -e "\e[1mUsage\e[0m: $(basename "$0") \e[1;34m[flags]\e[0m \e[1;32m[options]\e[0m"
     echo
-    echo -e "\e[1mOptions:\e[0m"
-    echo -e "  \e[1;34m-h, --help\e[0m                  Show this help message and exit"
-    echo -e "  \e[1;34m--about\e[0m                     Specify a keyword to filter tips"
+    echo -e "\e[1mOptions\e[0m:"
+    echo -e "  \e[1;34m-h, --help\e[0m   Show this help message and exit"
+    echo -e "  \e[1;34m--about\e[0m      Specify a keyword to filter tips"
     echo
-    echo -e "\n"
-    echo -e "\e[1mExamples:\e[0m"
+    echo -e "\e[1mExamples\e[0m:"
     echo -e "  $(basename "$0") \e[1;34m--about\e[0m git"
-    echo -e "\n"
-    echo -e "\e[1mGitHub:\e[0m \e[0;30mhttps://github.com/cli-stuff/cli-tips\e[0m"
+    echo
+    echo -e "\e[1mGitHub\e[0m: https://github.com/cli-stuff/cli-tips\e[0m"
 }
 
 # Parse command-line options
