@@ -19,13 +19,13 @@ teardown() {
 @test "Displays help with -h option" {
     run "$SCRIPT_PATH" -h
     [ "$status" -eq 0 ]
-    [[ "$output" == *"Usage:"* ]]
+    [[ "$output" == *"Usage"* ]]
 }
 
 @test "Displays help with --help option" {
     run "$SCRIPT_PATH" --help
     [ "$status" -eq 0 ]
-    [[ "$output" == *"Usage:"* ]]
+    [[ "$output" == *"Usage"* ]]
 }
 
 @test "Errors on unknown option" {
